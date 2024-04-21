@@ -1,0 +1,127 @@
+body {
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Caveat", "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+h2 {
+    font-size: 32px;
+    border-bottom: solid 2px;
+    color: #2E8B57;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-family: "Caveat", "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Caveat", "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: "Caveat", "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+li {
+    margin: 15px;
+    list-style-type: square;
+    font-size: 15px;
+}
+
+a:link {
+    color: #15c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2E8B57;
+}
+
+#topmenu ul {
+    padding: 0px;
+}
+
+#topmenu li {
+    float: left;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 91px;
+    height: 23px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Architects Daughter", "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+#topmenu a {
+    color: #999999;
+    font-size: 0.8em;
+    padding-top: 3px;
+    text-decoration: none;
+}
+
+#topmenu a:hover {
+    color: #2E8B57;
+}
+
+#topmenu {
+    width: 780px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#base_top {
+    width: 100%;
+    margin: auto;
+}
+
+#base_bottom {
+    width: 100%;
+    margin: auto;
+    background-color: #eeeeee;
+}
+
+#base {
+    width: 780px;
+    margin: auto;
+    padding: 10px;
+    height: 100%;
+}
+
+#head {
+    width: 780px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    padding: 10px;
+}
+
+#left {
+    width: 220px;
+    float: left;
+}
+
+#right {
+    float: left;
+    width: 780px;
+}
+
+#center {
+    float: left;
+}
+
+#foot {
+    clear: both;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
