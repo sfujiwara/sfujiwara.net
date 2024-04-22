@@ -1,5 +1,7 @@
 # sfujiwara.com
 
+[![GitHub Actions](https://github.com/sfujiwara/sfujiwara/actions/workflows/config.yaml/badge.svg)](https://github.com/sfujiwara/sfujiwara/actions/workflows/config.yaml)
+
 https://sfujiwara.com
 
 ## Architecture
