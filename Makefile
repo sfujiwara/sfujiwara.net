@@ -15,7 +15,10 @@ cloud-run-deploy:
 	  sfujiwara
 
 cloud-build:
-	gcloud builds submit --project $(PROJECT) --region=us-central1
+	gcloud builds submit \
+	  --project $(PROJECT) \
+	  --config cloudbuild.yaml \
+	  --region us-central1
 
 terraform-plan:
 	cd terraform && terraform plan
