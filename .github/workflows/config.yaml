@@ -27,7 +27,7 @@ jobs:
       # - name: Deploy
       #   run: make cloud-build
 
-        name: Login to GAR
+      - name: Login to GAR
         uses: docker/login-action@v3
         with:
           registry: us-central1-docker.pkg.dev
