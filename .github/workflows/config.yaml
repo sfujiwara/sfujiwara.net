@@ -26,7 +26,6 @@ jobs:
       #   run: make cloud-build
 
       - name: Docker Auth
-        id: docker-auth
         uses: docker/login-action@v3
         with:
           username: oauth2accesstoken
