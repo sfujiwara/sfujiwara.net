@@ -14,6 +14,9 @@ cloud-run-deploy:
 	  --image $(DOCKER_IMAGE) \
 	  sfujiwara
 
+cloud-build:
+	gcloud builds submit --project $(PROJECT) --region=us-central1
+
 terraform-plan:
 	cd terraform && terraform plan
 
