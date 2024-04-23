@@ -1,6 +1,6 @@
 # sfujiwara.com
 
-[![GitHub Actions](https://github.com/sfujiwara/sfujiwara/actions/workflows/config.yaml/badge.svg)](https://github.com/sfujiwara/sfujiwara/actions/workflows/config.yaml)
+[![GitHub Actions](https://github.com/sfujiwara/sfujiwara.com/actions/workflows/config.yaml/badge.svg)](https://github.com/sfujiwara/sfujiwara.com/actions/workflows/config.yaml)
 
 https://sfujiwara.com
 
