@@ -20,6 +20,9 @@ cloud-build:
 	  --config cloudbuild.yaml \
 	  --region us-central1
 
+terraform-init:
+	cd terraform && terraform init
+
 terraform-plan:
 	cd terraform && terraform plan
 

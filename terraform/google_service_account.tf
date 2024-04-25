@@ -6,5 +6,5 @@ resource "google_service_account" "github" {
 resource "google_service_account_iam_member" "github" {
   service_account_id = google_service_account.github.id
   role               = "roles/iam.workloadIdentityUser"
-  member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.name}/attribute.repository/sfujiwara/sfujiwara"
+  member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.name}/attribute.repository/sfujiwara/sfujiwara.com"
 }
