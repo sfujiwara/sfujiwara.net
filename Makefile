@@ -28,3 +28,6 @@ terraform-plan:
 
 terraform-apply:
 	cd terraform && terraform apply
+
+start:
+	cd frontend && pnpm run dev
