@@ -15,6 +15,7 @@ cloud-run-deploy:
 	  --project $(PROJECT) \
 	  --region us-central1 \
 	  --image $(DOCKER_IMAGE) \
+	  --max-instances 10 \
 	  sfujiwara
 
 cloud-build:
