@@ -1,8 +1,21 @@
+FROM node:22.0 AS build
+
+WORKDIR /app
+
+COPY frontend frontend
+COPY Makefile Makefile
+
+WORKDIR /app/frontend
+
+RUN npm install
+RUN npm run build
+
+
 FROM nginx:1.15.12-alpine
 
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
+# /etc/nginx/nginx.conf refers /etc/nginx/conf.d/*.conf.
 COPY default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/frontend/dist /usr/share/nginx/html
 
 EXPOSE 8080
 
