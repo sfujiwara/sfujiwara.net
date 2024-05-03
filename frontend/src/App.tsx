@@ -170,16 +170,29 @@ function refereedConferenceProceedings() {
 }
 
 function technicalPapers() {
+  const items = [
+    {
+      "text": "S. Fujiwara, A. Takeda, T. Kanamori, DC Algorithm for Extended Robust Support Vector Machine, 2014",
+      "url": "https://www.keisu.t.u-tokyo.ac.jp/data/2014/METR14-38.pdf"
+    },
+    {
+      "text": "T. Kanamori, S. Fujiwara and A. Takeda, Breakdown Point of Robust Support Vector Machine, 2014",
+      "url": "http://arxiv.org/abs/1409.0934"
+    },
+  ]
+
   return (
     <List>
-      <ListItem>
-        <ListItemIcon><ArticleIcon /></ListItemIcon>
-        <ListItemText primary="S. Fujiwara, A. Takeda, T. Kanamori, DC Algorithm for Extended Robust Support Vector Machine, 2014" />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon><ArticleIcon /></ListItemIcon>
-        <ListItemText primary="T. Kanamori, S. Fujiwara and A. Takeda, Breakdown Point of Robust Support Vector Machine, 2014" />
-      </ListItem>
+      {items.map((item) => {
+        return <ListItem>
+          <ListItemIcon>
+          <IconButton size="large" edge="start" href={item.url} target='_blank'>
+            <ArticleIcon color='primary' />
+          </IconButton>
+          </ListItemIcon>
+          <ListItemText primary={item.text} />
+        </ListItem>
+      })}
     </List>
   )
 }
