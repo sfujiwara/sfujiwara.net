@@ -4,7 +4,6 @@ type Item = {
     link: string
 }
 
-
 export const accounts: Item[] = [
     {
         icon: 'mail',

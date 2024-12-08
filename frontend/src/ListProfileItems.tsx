@@ -19,23 +19,28 @@ import IconButton from '@mui/material/IconButton';
 import StorageIcon from '@mui/icons-material/Storage';
 
 
-export default function ListProfileItem({ text, href, icon }) {
+export default function ListProfileItem({ text, href, icon }: {text: string, href: string, icon: string}) {
+    let color: "primary" | "disabled" = "primary"
+    if (href == "") {
+        color = "disabled"
+    }
+
     return (
         <ListItem>
             <ListItemIcon>
                 <IconButton size="small" edge="start" href={href} target='_blank'>
-                    {icon === 'twitter' && <TwitterIcon color='primary' />}
-                    {icon === 'github' && <GitHubIcon color='primary' />}
-                    {icon === 'mail' && <MailIcon color='primary' />}
-                    {icon === 'book' && <BookIcon color='primary' />}
-                    {icon === 'business' && <BusinessIcon color='primary' />}
-                    {icon === 'link' && <LinkIcon color='primary' />}
-                    {icon === 'school' && <SchoolIcon color='primary' />}
-                    {icon === 'article' && <ArticleIcon color='primary' />}
-                    {icon === 'storage' && <StorageIcon color='primary' />}
-                    {icon === 'check' && <CheckIcon color='primary' />}
-                    {icon === 'google' && <GoogleIcon color='primary' />}
-                    {icon === 'people' && <PeopleIcon color='primary' />}
+                    {icon === 'twitter' && <TwitterIcon color={color} />}
+                    {icon === 'github' && <GitHubIcon color={color} />}
+                    {icon === 'mail' && <MailIcon color={color} />}
+                    {icon === 'book' && <BookIcon color={color} />}
+                    {icon === 'business' && <BusinessIcon color={color} />}
+                    {icon === 'link' && <LinkIcon color={color} />}
+                    {icon === 'school' && <SchoolIcon color={color} />}
+                    {icon === 'article' && <ArticleIcon color={color} />}
+                    {icon === 'storage' && <StorageIcon color={color} />}
+                    {icon === 'check' && <CheckIcon color={color} />}
+                    {icon === 'google' && <GoogleIcon color={color} />}
+                    {icon === 'people' && <PeopleIcon color={color} />}
                 </IconButton>
             </ListItemIcon>
             <ListItemText primary={text} />
