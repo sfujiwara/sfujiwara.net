@@ -16,6 +16,11 @@ export const accounts: Item[] = [
         link: 'https://x.com/shuhei_fujiwara',
     },
     {
+        icon: 'github',
+        text: 'GitHub',
+        link: 'https://github.com/sfujiwara',
+    },
+    {
         icon: 'link',
         text: 'Kaggle (Competition Expert)',
         link: 'https://www.kaggle.com/sfujiwara',
