@@ -1,4 +1,15 @@
 variable "project" {
-    type    = string
-    default = "sfujiwara"
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "name" {
+  type = string
+}
+
+variable "domain" {
+  type = string
 }

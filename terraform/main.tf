@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     google = {
-      version = "5.25.0"
+      version = "6.14.1"
     }
   }
 
@@ -12,5 +12,5 @@ terraform {
 
 provider "google" {
   project = var.project
-  region  = "us-central1"
+  region  = var.location
 }

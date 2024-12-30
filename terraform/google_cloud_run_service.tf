@@ -1,23 +1,19 @@
-resource "google_cloud_run_service" "sfujiwara" {
-  name     = "sfujiwara"
-  location = "us-central1"
+resource "google_cloud_run_v2_service" "default" {
+  project             = var.project
+  name                = var.name
+  location            = var.location
+  deletion_protection = false
+  ingress             = "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER"
 
   template {
-    spec {
-      containers {
-        image = "us-central1-docker.pkg.dev/sfujiwara/docker/sfujiwara"
-      }
+    containers {
+      image = "us-docker.pkg.dev/cloudrun/container/hello"
     }
-  }
-
-  traffic {
-    percent         = 100
-    latest_revision = true
   }
 
   lifecycle {
     ignore_changes = [
-      template[0].spec[0].containers[0].image,
+      template[0].containers[0].image,
     ]
   }
 }
