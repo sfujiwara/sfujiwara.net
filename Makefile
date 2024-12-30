@@ -5,24 +5,22 @@ docker-build:
 	docker build -t $(DOCKER_IMAGE) .
 
 docker-run:
-	docker run -p 8080:8080 $(DOCKER_IMAGE)
+	docker run -p 80:80 $(DOCKER_IMAGE)
 
 docker-push:
 	docker push $(DOCKER_IMAGE)
 
-cloud-run-deploy:
-	gcloud run deploy \
+cloud-run:
+	gcloud run deploy sfujiwara \
 	  --project $(PROJECT) \
 	  --region us-central1 \
 	  --image $(DOCKER_IMAGE) \
 	  --max-instances 10 \
-	  sfujiwara
+	  --port 80
 
+.PHONY: cloud-build
 cloud-build:
-	gcloud builds submit \
-	  --project $(PROJECT) \
-	  --config cloudbuild.yaml \
-	  --region us-central1
+	gcloud builds submit --tag $(DOCKER_IMAGE)
 
 terraform-init:
 	cd terraform && terraform init
