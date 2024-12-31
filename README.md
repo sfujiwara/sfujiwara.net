@@ -4,25 +4,6 @@
 
 https://sfujiwara.com
 
-## Architecture
-
-```mermaid
-graph LR;
-    USER(User) --> DNS[Cloud DNS]
-
-    subgraph LB[Load Balancer]
-        direction TB
-        IP[External IP] --> MAP[URL Map] --> BE[Backend]
-    end
-
-    subgraph NEG[Serverless NEG]
-        RUN[Cloud Run]
-    end
-
-    DNS --> IP
-    BE --> NEG
-```
-
 ## Deployment
 
 ### Terraform
@@ -41,9 +22,5 @@ make docker-push
 ### Cloud Run
 
 ```shell
-make cloud-run-deploy
+make cloud-run
 ```
-
-### Memo
-
-- Fix name server settings of registrar (onamae.com)
