@@ -274,3 +274,21 @@ export const activities: Item[] = [
         "link": "https://optimization.connpass.com"
     },
 ]
+
+export const certifications: Item[] = [
+    {
+        icon: 'google',
+        "text": "Google Certified Professional - Data Engineer (Currently expired, but 43rd in the world)",
+        "link": "/certifications/professional-data-engineer.pdf"
+    },
+    {
+        icon: 'google',
+        "text": "Google Certified Professional - Cloud Architect (Currently expired, but 379th in the world)",
+        "link": "/certifications/professional-cloud-architect.pdf"
+    },
+    {
+        icon: 'google',
+        "text": "Google Cloud Platform Qualified Data Analyst",
+        "link": "/certifications/gcp-qualified-data-analyst.pdf"
+    }
+]

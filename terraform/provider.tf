@@ -4,10 +4,6 @@ terraform {
       version = "6.14.1"
     }
   }
-
-  backend "gcs" {
-    bucket = "sfujiwara-terraform"
-  }
 }
 
 provider "google" {

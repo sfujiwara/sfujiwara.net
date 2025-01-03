@@ -11,6 +11,7 @@ import {
   activities,
   awards,
   books,
+  certifications,
   conferenceProceedings,
   educations,
   journals,
@@ -64,6 +65,9 @@ function App() {
 
       <Typography component="h2" variant="h4" gutterBottom>Activities</Typography>
       <List>{activities.map(item => <ListProfileItem text={item.text} href={item.link} icon={item.icon} />)}</List>
+
+      <Typography component="h2" variant="h4" gutterBottom>Certifications</Typography>
+      <List>{certifications.map(item => <ListProfileItem text={item.text} href={item.link} icon={item.icon} />)}</List>
     </>
   )
 }
