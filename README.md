@@ -1,8 +1,8 @@
-# sfujiwara.com
+# sfujiwara.net
 
 [![GitHub Actions](https://github.com/sfujiwara/sfujiwara.com/actions/workflows/config.yaml/badge.svg)](https://github.com/sfujiwara/sfujiwara.com/actions/workflows/config.yaml)
 
-https://sfujiwara.com
+https://sfujiwara.net
 
 ## Deployment
 

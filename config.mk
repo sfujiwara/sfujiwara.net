@@ -1,4 +1,4 @@
 PROJECT := sfujiwara
-NAME := sfujiwara-com
+NAME := sfujiwara-net
 LOCATION := us-central1
-DOMAIN := sfujiwara.com
+DOMAIN := sfujiwara.net
