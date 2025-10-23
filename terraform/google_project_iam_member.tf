@@ -1,5 +1,8 @@
-resource "google_project_iam_member" "editor" {
+resource "google_project_iam_member" "github" {
+  for_each = toset([
+    "roles/editor",
+  ])
   project = var.project
-  role    = "roles/editor"
-  member  = google_service_account.github.member
+  role    = each.value
+  member  = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.name}/attribute.repository/sfujiwara/${var.domain}"
 }

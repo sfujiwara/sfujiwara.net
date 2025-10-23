@@ -1,15 +1,19 @@
 variable "project" {
-  type = string
+  type    = string
+  default = "sfujiwara"
 }
 
 variable "location" {
-  type = string
+  type    = string
+  default = "us-central1"
 }
 
 variable "name" {
-  type = string
+  type    = string
+  default = "sfujiwara-net"
 }
 
 variable "domain" {
-  type = string
+  type    = string
+  default = "sfujiwara.net"
 }
