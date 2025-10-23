@@ -27,8 +27,6 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: us-central1-docker.pkg.dev
-          username: oauth2accesstoken
-          password: ${{ steps.auth.outputs.access_token }}
 
       - name: Build Docker image
         run: make docker-build
