@@ -26,7 +26,7 @@ cloud-run:
 
 .PHONY: cloud-build
 cloud-build:
-	gcloud builds submit --tag $(DOCKER_IMAGE)
+	gcloud builds submit --project $(PROJECT) --tag $(DOCKER_IMAGE)
 
 .PHONY: terraform-tfvars
 terraform-tfvars:
