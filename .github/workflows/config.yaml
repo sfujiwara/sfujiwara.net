@@ -23,10 +23,7 @@ jobs:
           project_id: sfujiwara
           workload_identity_provider: projects/609385848802/locations/global/workloadIdentityPools/github-pool/providers/github-provider
 
-      - name: Login to Google Artifact Registry
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev
-
-      - name: Build Docker image
+      - name: Build and push Docker image with Cloud Build
         run: make cloud-build
 
       - name: Deploy to Cloud Run
